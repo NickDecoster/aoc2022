@@ -6,12 +6,12 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-public class Main {
+public class aoc1 {
     public static void main(String[] args) {
         BufferedReader reader;
 
         try {
-            reader = new BufferedReader(new FileReader("/home/nick/skryv/projects/aoc1/src/sample.txt"));
+            reader = new BufferedReader(new FileReader("/home/nick/skryv/projects/aoc1/src/sample1.txt"));
             String line = reader.readLine();
 
             int currentElfCalories = 0;
@@ -27,11 +27,9 @@ public class Main {
             }
 
             Calories.add(currentElfCalories);
-
-            Calories.stream().sorted().limit(3).forEach(System.out::println);
             Collections.sort(Calories);
             Collections.reverse(Calories);
-            System.out.println(Calories.get(0) + Calories.get(1) + Calories.get(2));
+            System.out.println(Calories.get(0) + Calories.get(1) + Calories.get(2)); //only get(0) for first part
             reader.close();
 
         } catch (IOException e) {
